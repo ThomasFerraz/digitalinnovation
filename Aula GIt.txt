@@ -1,0 +1,43 @@
+cd          cd
+dir         ls
+mkdir 	    mkdir
+del/rmdir   rm -rf
+================================
+- SHA1
+Algoritmo de encriptação
+Segure Hash Algorithm(Algoritmo de Hash Seguro)
+
+- Objetos Fundamentais
+- Sistema Distribuido
+- Segurança
+================================
+Blobs
+Tipo, o Tamanho , \0 , o conteudo
+
+Trees
+Armazena as Blobs
+
+Commits
+Tree
+Parente
+autor
+mensagem
+timestamp
+======================
+- git init
+  Cria um repositorio na Pasta
+- git add
+- git commit
+- a Mostra Arquivos Ocultos
+============================
+Tracke e Untracked
+ unmodified - não foi modificado
+ Modified   - Arquivo modificado
+ Staged     - Area especial para aguardar ação, normalmente se preparando para o Commit.
+
+git add nomeArquivo
+git add *
+git add .
+git commit -m "msg.."
+
+working directoty > (git add) staging area > (git commit -m ) Local Repository

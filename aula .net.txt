@@ -1,0 +1,151 @@
+Cultura Spotify
+
+Atualmente o compilador do C# é o Roslyn
+
+Compilado em uma linguagem intermediaria (IL)
+
+O Cóigo e os recursos de IL são armazedos no disco em arquivo executável chamado assembly, geralemnte com uma exteção .exe ou .dll
+
+Quando o C# é executado, o assembly é carregado no CLR
+
+Em Seguida o CLR executará a compilação just int time (JIT) para converter o código IL em instruções de máquina nativas
+
+CLR tambem fornece outros serviços:
+- Garbage Collector
+- Expection Hangler
+- Resources Manager
+
+
+Os Principais Conceitos organizacionais em C# são:
+-Programas
+-namespaces
+-tipos
+-membros
+-assemblies
+
+Estrutura de Programa
+Programas C# consistem em um ou mais arquivos
+
+Os Programadas declaram tipos, que contêm membros e poem ser organizados em namespaces
+
+Classes e interfaces são exemplos de tipos
+
+Campos, métodos, propriedades e eventos são exemplos de membros.
+
+Quando os programas c# são compilados, eles são fisicamente empacotados em assemblis
+============================
+Tipos e Variáveis
+- Variaveis de tipos de valor contêm diretamente seus dados
+- As variaveis tem sua propria copia dos dados e não é possivel que as operações afetem outra variavel.
+
+Tipos de Valor
+Numéricos: sbyte,shote,int,long,byte,ushort,uint,ulong
+
+Caracteres Uncoe: Char
+
+Pontos Flutuantes: float, double, decimal
+
+Booleano: bool
+
+Tipos de Referência
+Variavel de tipos de referencia armazenam referencias a seus dados.
+É possivel que duas variáveis façam referencia ao mesmo objeto e, portanto, que operações em uma variável afetem o objeto referenciado pela outra variavel.
+
+Tipos e referencia
+Tipos Class: class,object,string
+Tipos Arrays: int[],int[,],etc...
+Interface,delegate.
+
+Instruções
+Arrays
+
+==============================================
+1. Classes e Objetos
+ - Classes são os tipos mais fundamentais de C#
+ - Uma Classe é uma estrutura de dados que combina estado (campos) e ações (métodos)
+ - Objetos são instancias de uma classe
+ - As Classes suportam herança e polimorfismo, mecanismos pelos quais as classes derivadas estender e especializar as classes base.
+ - Instancias de classes(objetos) são criadas usando o operador new, que aloca memória para uma nova instancia, chama um construtor para inicializar a instancia e retorna uma referencia a instancia.
+ Ponto p1 = new Ponto(0,0);
+ Ponto p2 = new Ponto(10,20);
+
+A Memória ocupada por um objeto é recuperada automaticamente quando o objeto não está mais acessível. Não é necessário nem possível desalocar explicitamente objetos em C#.
+
+Membros
+- Os membros de uma classe podem ser estáticos ou membros da instãncia
+Membros estáricos pertencem a classe e membros de instancia pertemcem ao objeto
+Constantes,variáveis,métodos,propriedades,construtores.etc...
+
+Acessibilidade
+-Cada membro de uma classe tem uma acessibilidade associada,que controla as regiões do texto do programa que podem acessar o membro.
+Podem ser:
+ - public
+ - protected
+ - internal
+ - private
+
+Herança
+Uma declaração de classe pode especificar uma classe base, herdando os membros public, internal  (somente se tiver no mesmo assembly) e protecte da classe base
+
+Omitir uma especificação de classe base é o mesmo que derivar do tipo object
+
+Métodos
+Um método é um membro que implementa uma computação ou ação que pode ser executada por um objeto ou classe
+Os métodos podem ter uma lista de parâmetros, que representam valores ou referencias de variaveis passados para o método, e um tipo de retorno, que especifica o tipo do valor calculado e retornado pelo método.
+(quando vamos dar o nome ao método que seja um verbo pois indica uma ação e as propriedades que sejam substantivos)
+================================================
+Structs
+Interfaces
+Enums
+
+1 - Structs
+Como as classes, as structs são estruturas de dados que podem conter membros de dados e membros e ação, mas, diferente das classes, as structs são tipos e valor e não requerem alocação e heap
+
+Uma variavel de um tipo e struct armazena diretamente os dados da estrutura, enquanto uma variavel de um tipo de classe armazena uma referencia a um objeto alocado na memória.
+
+Structs não aceitam herança determinada pelo desenvolvedor
+
+São uteis para pequenas estruturas de dados que possuem semantica de valor: numeros complexos, pontos em um sistema de cordenadas ou pares de chaves-valor em um dicionario são boms exemplos de utilização.
+
+O uso de structs em vez de classes para pequenas estruturas de dados pode fazer uma grande diferença no numero de alocação e memoria.
+
+Construtores de structs são chamados com o operador new, semelhante a um construtor de classe, mas em vez de alocar dinamicamente um objeto no heap gerencado e retornar uma referencia a ele, um construtor struct simplesmente retorna o próprio valor struct(normalmente em um local temporário na stack), e esse valor é copiado conforme necessário.
+
+2 - Interfaces
+Uma interface define um contrato que pode ser implementado por classes e structs
+
+Uma interface pode conter metodos, propriedades, eventos e indexadores
+
+Uma interface não fornece implementações dos membros que define - apenas suas "assinaturas"
+
+As interfaces podem empregar herança múltipla
+
+3  Enums
+Um enum é um tipo de valor distinto com um conjunto e constrantes nomeadas
+
+Você define enumerações quando precisa definir um tipo que pode ter um conjunto de valores discretos.
+Eles usam um dos tipos de valor integral como armazenamento subjacente. Eles fornecem significado semântico aos valores discretos.
+
+Cada tipo de enum possui um tipo integral corresponente chamado tipo subjacente do tipo de enum.
+
+Um tipo de enumeração que não declara explicitamente um tipo subjacente tem um tipo subjacente int.
+====================================================
+Retrospectiva
+- Passo, Presente e Futuro do .Net
+- O que é, Como e ONde Usar .Net
+- Quem usa .Net
+- Preparando o ambiente
+- Conhecimento a CLI o .Net
+- Criando uma aplicação console
+- O que é o C#
+- Como funciona
+- Estrutura e Programa
+- Tipos e Variaveis
+- Principais instruções
+- Arrays
+- Classes e Objetos
+- Structs
+- Interfaces
+- Enums
+
+Exemplo Prático
